@@ -51,3 +51,9 @@ aws_access_key_id = CCCCCCCCCCCCCCCCCCC
 aws_secret_access_key = cccccccccccccccccccc
 aws_session_token = cccccccccccccccccccc
 ```
+
+## 사용 예시
+```
+aws_mfa           : 대화형으로 profile 리스트 확인 및 선택
+aws_mfa [profile] : 특정 profile에 대한 mfa 인증 즉시 실행
+```
