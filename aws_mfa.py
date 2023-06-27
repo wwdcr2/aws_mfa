@@ -93,9 +93,7 @@ awsCred[original_profile + '-mfa']['aws_session_token']     = mfaCreds['Credenti
 with open('%s/.aws/credentials' % homeDirectory, 'w') as awsCredfile:
     awsCred.write(awsCredfile)
 
-print("\n==> '" + original_profile + "-mfa' created successfully <==")
+print("\n==> '" + original_profile + "-mfa' created/updated successfully <==")
 print("==> Use '--profile' option with '" + original_profile + "-mfa' <==")
 print("==> Use below command to change 'default profile' to '" + original_profile + "-mfa' <==")
-print('Mac/Linux    => export AWS_profile=' + original_profile + '-mfa')
-print('CMD          => SET AWS_profile=' + original_profile + '-mfa')
-print('Powershell   => $Env:AWS_profile=' + original_profile + '-mfa')
+print('\n$ export AWS_profile=' + original_profile + '-mfa')

@@ -14,6 +14,9 @@ aws_mfa를 사용하면 Access Key에 대한 MFA 인증을 간소화 할 수 있
 
 3. Let's use aws_mfa
 ```
+## 기능
+- aws_mfa 명령어를 입력하면 대화형으로 등록된 aws profile 정보를 보여줍니다. 사용자는 화살표로 원하는 profile을 선택할 수 있습니다.<br>![image](https://github.com/wwdcr2/aws_mfa/assets/61615430/fc772136-0bd6-4305-aa17-7928fbc9cdfd)
+- 선택한 profile에 대해 MFA인증을 완료하면 `profile-mfa` 이름의 profile이 자동으로 생성됩니다.<br>(이미 동일한 이름의 `profile-mfa`가 존재하면 key를 업데이트합니다.)<br><img width="474" alt="image" src="https://github.com/wwdcr2/aws_mfa/assets/61615430/64e77cda-e805-4efc-93ee-027af6da2574"> 
 
 ## Prerequsite
 aws_mfa를 사용하기 위해서는 mfa 디바이스 등록이 완료된 User의 Access Key가 credential file에 등록되어 있어야합니다.
@@ -47,4 +50,10 @@ aws_secret_access_key = bbbbbbbbbbbbbbbbbbbb
 aws_access_key_id = CCCCCCCCCCCCCCCCCCC
 aws_secret_access_key = cccccccccccccccccccc
 aws_session_token = cccccccccccccccccccc
+```
+
+## 사용 예시
+```
+aws_mfa           : 대화형으로 profile 리스트 확인 및 선택
+aws_mfa [profile] : 특정 profile에 대한 mfa 인증 즉시 실행
 ```
